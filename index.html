@@ -4,152 +4,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./assets/css/quilljs_1.3.6_snow.css" rel="stylesheet">
-	<style>
-		* {
-			padding: 0;
-			margin: 0;
-		}
-
-		section {
-			width: 1000px;
-			margin: 40px;
-			margin-left: auto;
-			margin-right: auto;
-
-			/** display: flex;
-			justify-content: space-between; space-evenly; space-around;*/
-			
-			display: grid;
-			grid-template-columns: 1fr 3fr;
-			grid-template-rows: 1fr;
-			column-gap: 0px;
-			row-gap: 0px;
-		}
-
-		
-		section > article {
-			grid-area: 1 / 2 / 2 / 3;
-			padding: 20px;
-		}
-
-		
-		section > article:last-child {
-			grid-area: 1 / 1 / 2 / 2;
-			margin: 20px 0;
-			border: solid 1px rgba(128, 128, 128, 0.49);
-		}
-		
-
-	</style>
+	<link rel="stylesheet" href="./assets/css/app.css">
 	<title>QuillJS</title>
 </head>
 
 <body>
-	<section>
-		<article>
-			<!-- Create the editor container -->
+	<section class="adlaf-body-editor">
+		<article class="adlaf-editor-left">
 			<div id="editor" style="height: 375px;">
 				<h3 class="ql-align-center">PAGARÉ</h3>
 				<p class="ql-align-center">POR UN MONTO DE <strong>(signo moneda)</strong> <strong>(MONTO EN NÚMEROS CON 2 DECIMALES)</strong></p>
 				<br />
 				<p style="text-align: justify;">
-					<strong>(NOMBRE DEL CLIENTE)</strong> cédula de persona jurídica número <strong>(NÚMERO CEDULA JURIDICA EN LETRAS)</strong>, 
-					con domicilio social en <strong>(NOMBRE PROVINCIA)</strong>, <strong>(NOMBRE DE CANTÓN)</strong>, <strong>(NOMBRE DE DISTRITO)</strong>, OTRAS SEÑAS 
-					<strong>(DIRECCIÓN EXACTA)</strong>, representada en este acto por (NOMBRE COMPLETO DEL REPRESENTANTE LEGAL), mayor de edad, ESTADO CIVIL 
-					(ESTADO CIVIL), PROFESION U OFICIO (NOMBRE DE LA PROFESIÓN U OFICIO), vecino de PROVINCIA (NOMBRE PROVINCIA), CANTON 
-					(NOMBRE DE CANTÓN), DISTRITO (NOMBRE DE DISTRITO), OTRAS SEÑAS (DIRECCIÓN EXACTA), portador de la cédula de identidad número 
-					(NUMERO DE DOCUENTO DE IDENTIDAD EN LETRAS), actuando en su condición de (REPRESENTACIÓN LEGAL DE LA SOCIEDAD SEGÚN 
-					PERSONERIA JURIDICA Y/O PODER LEGAL )  con facultades de ( FACULTADES LEGALES SEGÚN PERSONERIA JURIDICA Y/O PODER LEGAL ), 
+					<strong>NOMBRE DEL CLIENTE</strong> cédula de persona jurídica número <strong>NÚMERO CEDULA JURIDICA EN LETRAS</strong>, 
+					con domicilio social en <strong>NOMBRE PROVINCIA</strong>, <strong>NOMBRE DE CANTÓN</strong>, <strong>NOMBRE DE DISTRITO</strong>, OTRAS SEÑAS 
+					<strong>DIRECCIÓN EXACTA</strong>, representada en este acto por <strong>NOMBRE COMPLETO DEL REPRESENTANTE LEGAL</strong>, mayor de edad, ESTADO CIVIL 
+					<strong>ESTADO CIVIL</strong>, PROFESION U OFICIO <strong>NOMBRE DE LA PROFESIÓN U OFICIO</strong>, vecino de PROVINCIA <strong>NOMBRE PROVINCIA</strong>, CANTON 
+					<strong>NOMBRE DE CANTÓN</strong>, DISTRITO <strong>NOMBRE DE DISTRITO</strong>, OTRAS SEÑAS <strong>DIRECCIÓN EXACTA</strong>, portador de la cédula de identidad número 
+					<strong>NUMERO DE DOCUENTO DE IDENTIDAD EN LETRAS</strong>, actuando en su condición de <strong>REPRESENTACIÓN LEGAL DE LA SOCIEDAD SEGÚN 
+					PERSONERIA JURIDICA Y/O PODER LEGAL</strong>  con facultades de <strong> FACULTADES LEGALES SEGÚN PERSONERIA JURIDICA Y/O PODER LEGAL</strong>, 
 					del Registro Público bajo el citado número de cédula jurídica, sociedad en adelante denominada como “La Deudora”, 
 					MANIFIESTA: Que por este PAGARÉ regido por las leyes de la República de Costa Rica, PROMETE INCONDICIONALMENTE PAGAR a 
 					la orden de BANCO LAFISE, S.A., un banco organizado y constituido de acuerdo con las leyes de la República de Costa Rica, 
 					con cédula jurídica costarricense número tres-ciento uno-veintitrés mil ciento cincuenta y cinco, con domicilio en San José,
 					San Pedro de Montes de Oca, de la Fuente de la Hispanidad cincuenta metros este, Edificio LAFISE, sociedad en adelante 
-				    referida indistintamente como “el Banco” o “la Acreedora”, la suma de (MONTO DE LA FACILIDAD CREDITICIA APROBADO EN  LETRAS) 
-					(MONEDA EN LETRAS)  EXACTOS (SIGNO MONEDA) (MONTO DE LA FACILIDAD CREDITICIA APROBADO EN NUMEROS)  moneda en curso legal de 
-					( PAIS SEGÚN MONEDA ),  suma que pagará la Deudora mediante  (CANTIDAD DE CUOTAS EN LETRAS)  cuotas, ( FORMA DE PAGO SEGÚN 
-					LO APROBADO EN TDA)  por un monto de  (MONEDA EN LETRAS)  EXACTOS (SIGNO MONEDA) (MONTO DE LA FACILIDAD CREDITICIA APROBADO 
-					EN NUMEROS CON DOS DECIMALES)  moneda en curso legal de ( PAIS SEGÚN MONEDA ) cada una, excepto la última que será del saldo 
-					que aún quedare, debiendo realizar el pago de la primera cuota el día  (DIA DEL MES EN LETRAS QUE INICIO EL CRÉDITO) del MES 
-					(MES DEL INICIO EN LETRAS) del año (AÑO DE INICIO EN LETRAS), así sucesivamente todos los días  (DIA DEL MES DE PAGO EN LETRAS) 
-					de cada mes, hasta la última cuota el día (DIA DEL MES EN LETRAS QUE FINALIZA EL CRÉDITO) del MES (MES DEL FINAL EN LETRAS) del 
-					año (AÑO DEL FINAL EN LETRAS),, fecha de vencimiento de esta deuda. Esta deuda devengará intereses corrientes a partir de hoy 
-					a una tasa de interés  (COMPOSICIÓN DE LA TASA DE INTERES DE LA FACILIDAD DEL CREDITO ). Los intereses corrientes y moratorios 
-					se calcularán conforme a los días transcurridos sobre la base de un año comercial de trescientos sesenta (360) días. En caso 
+					referida indistintamente como “el Banco” o “la Acreedora”, la suma de <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO EN  LETRAS</strong> 
+					<strong>MONEDA EN LETRAS</strong>  EXACTOS <strong>SIGNO MONEDA</strong> <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO EN NUMEROS</strong>  moneda en curso legal de 
+					<strong> PAIS SEGÚN MONEDA</strong>,  suma que pagará la Deudora mediante  <strong>CANTIDAD DE CUOTAS EN LETRAS</strong>  cuotas, <strong> FORMA DE PAGO SEGÚN 
+					LO APROBADO EN TDA</strong>  por un monto de  <strong>MONEDA EN LETRAS</strong>  EXACTOS <strong>SIGNO MONEDA</strong> <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO 
+					EN NUMEROS CON DOS DECIMALES</strong>  moneda en curso legal de <strong> PAIS SEGÚN MONEDA</strong> cada una, excepto la última que será del saldo 
+					que aún quedare, debiendo realizar el pago de la primera cuota el día  <strong>DIA DEL MES EN LETRAS QUE INICIO EL CRÉDITO</strong> del MES 
+					<strong>MES DEL INICIO EN LETRAS</strong> del año <strong>AÑO DE INICIO EN LETRAS</strong>, así sucesivamente todos los días  <strong>DIA DEL MES DE PAGO EN LETRAS</strong> 
+					de cada mes, hasta la última cuota el día <strong>DIA DEL MES EN LETRAS QUE FINALIZA EL CRÉDITO</strong> del MES <strong>MES DEL FINAL EN LETRAS</strong> del 
+					año <strong>AÑO DEL FINAL EN LETRAS</strong>, fecha de vencimiento de esta deuda. Esta deuda devengará intereses corrientes a partir de hoy 
+					a una tasa de interés  <strong>COMPOSICIÓN DE LA TASA DE INTERES DE LA FACILIDAD DEL CREDITO</strong>. Los intereses corrientes y moratorios 
+					se calcularán conforme a los días transcurridos sobre la base de un año comercial de trescientos sesenta <strong>360</strong> días. En caso 
 					de mora, la Deudora reconocerá y pagará intereses moratorios a una tasa anual equivalente a la tasa de interés
 				</p>
 			</div>
 		</article>
-		<article>
-			<!-- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1> -->
+		<article class="adlaf-editor-right">
 			<h3 style="text-align: center;">Cláusulas</h3>
 			<hr />
 			<br />
 			<ul style="list-style: none;"
-				x-data="{ tags: [{ counter: 2, tag: '&MONTO' }, { counter: 1, tag: '&NOMBRE' }, { counter: 6, tag: '&PROVINCIA' }, { counter: 1, tag: '&CANTON' }, { counter: 2, tag: '&DISTRITO'} ] }">
-				<template x-for="value in tags" :key="value.tag">
+				x-data="{ tags: [ '&MONTO', '&DNI', '&NOMBRE', '&PROVINCIA', '&CANTON', '&DISTRITO', '&ESTADO_CIVIL', '&PROFESION' ] }">
+				<template x-for="tag in tags" :key="tag">
 					<li style="margin: 5px 0;">
-						<button style="border-radius: 5px; padding: 3px; background: #325D88; border-color: #325D88; color: #ffffff; cursor: pointer; box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);"
-							onclick="agregarClausula('&clausula')"
-							x-text="value.tag + ' ' + value.counter"></button>
+						<button class="adlaf-btn-clause" role="button"
+							x-on:click="handledAddClause(tag)" x-text="tag">
+						</button>
 					</li>
 				</template>
 				
 			</ul>
 		</article>
 	</section>
-	<section>
+
+	<!-- <section>
 		<h3>Contenido del Editor</h3>
 		<p id="content-text"></p>
-	</section>
-
-	<!-- Alpine.js -->
-	<script defer src="./assets/js/alpinejs@3.x.x.min.js"></script>
-	<!-- Include the Quill library -->
-	<script src="assets/js/quilljs_1.3.6.js"></script>
+	</section> -->
 	
-	<!-- Initialize Quill editor -->
-	<script>
-		const content = document.getElementById('content-text');
-		const quill = new Quill('#editor', {
-			modules: {
-				toolbar: [
-					[{ header: [1, 2, 3, false] }],
-					['bold', 'italic', 'underline', 'strike'],
-					[{ 'script': 'sub' }, { 'script': 'super' }],
-					[{ 'indent': '-1' }, { 'indent': '+1' }],
-					[{ 'color': [] }, { 'background': [] }],
-					[{ 'align': [] }],
-					['clean']
-				]
-			},
-			placeholder: 'Texto...',
-			theme: 'snow'  // or 'bubble'
-		});
-		
-		// const quill = new Quill('#editor', {
-			// modules: { 
-				// toolbar: true 
-			// },
-			// theme: 'snow'
-		// }); 
-		
-		
-		quill.on('text-change', () => {
-			let text = quill.root.innerHTML;
-			text = text.replace(/class="ql-align-justify"/g, 'style="text-align: justify;"');
-			text = text.replace(/class="ql-align-center"/g, 'style="text-align: center;"');
-			text = text.replace(/class="ql-align-right"/g, 'style="text-align: right;"');
-			content.innerHTML = text;
-		});
-
-		const agregarClausula = (text) => {
-			const posCursor = quill.getSelection().index;
-			quill.insertText(posCursor, `${ text };`, 'bold', true);
-		}
-
-	</script>
-
+	<script defer src="./assets/js/alpinejs@3.x.x.min.js"></script>
+	<script src="assets/js/quilljs_1.3.6.js"></script>
+	<script src="./assets/js/app.js"></script>
+	
 </body>
 
 </html>
