@@ -1,15 +1,10 @@
-
-const content = document.getElementById('content-text');
 const quill = new Quill('#editor', {
     modules: {
         toolbar: [
             [{ header: [1, 2, 3, false] }],
             ['bold', 'italic', 'underline', 'strike'],
-            [{ 'script': 'sub' }, { 'script': 'super' }],
-            [{ 'indent': '-1' }, { 'indent': '+1' }],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'align': [] }],
-            ['clean']
+            [{ 'align': [] }, { 'list': 'bullet' }, { 'list': 'ordered' }],
+            [{ 'color': [] }, { 'background': [] }, 'clean'],
         ]
     },
     placeholder: 'Texto...',
@@ -24,7 +19,7 @@ const handledAddClause = (text) => {
         if (lengthWord > 0) {
             quill.deleteText(positionCursor, lengthWord);
         }
-        quill.insertText(positionCursor, `${ text };`, 'bold', true); 
+        quill.insertText(positionCursor, `${ text };`,  { 'bold': true, color: 'red' }, true); 
     }
 }
 
