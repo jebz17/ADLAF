@@ -9,9 +9,9 @@
 </head>
 
 <body>
-	<section class="adlaf-body-editor">
-		<article class="adlaf-editor-left">
-			<div id="editor" style="height: 375px;">
+	<section class="adlaf_body_editor">
+		<article class="adlaf_editor_left">
+			<div id="editor">
 				<h3 class="ql-align-center">PAGARÉ</h3>
 				<p class="ql-align-center">POR UN MONTO DE <strong>(signo moneda)</strong> <strong>(MONTO EN NÚMEROS CON
 						2 DECIMALES)</strong></p>
@@ -68,39 +68,39 @@
 				</p>
 			</div>
 		</article>
-		<article class="adlaf-editor-right">
+		<article class="adlaf_editor_right">
 			<div x-data="{ open: false }">
-				<div class="adlaf-clasure-header">
+				<div class="adlaf_clasure_header">
 					<h3>Cláusulas</h3>
 					<button x-on:click="open = true">Agregar</button>
 				</div>
-				<div class="adlaf-modal" x-show="open">
-					<div class="adlaf-modal-content adlaf-fadeIn">
-						<span x-on:click="open = false" class="adlaf-modal-close">&times;</span>
-						<div class="adlaf-modal-header">
+				<div class="adlaf_modal" x-show="open">
+					<div class="adlaf_modal_content adlaf_fadeIn">
+						<span x-on:click="open = false" class="adlaf_modal_close">&times;</span>
+						<div class="adlaf_modal_header">
 							<h2>Title</h2>
 							<hr />
 						</div>
 						<div>
-							<article class="adlaf-form-group">
+							<article class="adlaf_form_group">
 								<label for="add">Nombre Cláusula</label>
 								<input type="text" name="add" id="add">
 							</article>
 						</div>
-						<div class="adlaf-modal-footer">
+						<div class="adlaf_modal_footer">
 							<button x-on:click="open = false">Cancelar</button>
 							<button>Guardar</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<hr class="adlaf-divisor" />
-			<div class="adlaf-content-clause">
+			<hr class="adlaf_divisor" />
+			<div class="adlaf_content_clause">
 				<ul style="list-style: none;"
 					x-data="{ tags: [ '&MONTO', '&DNI', '&NOMBRE', '&PROVINCIA', '&CANTON', '&DISTRITO', '&ESTADO_CIVIL', '&PROFESION', '&PAIS', '&CANTIDAD_CUOTAS', '&FORMA_PAGO', '&TASA_INTERES', '&REPRESENTANTE', '&FACULTAD_LEGAL' ] }">
 					<template x-for="tag in tags" :key="tag">
 						<li style="margin: 5px 0;">
-							<button class="adlaf-btn-clause" role="button" x-on:click="handledAddClause(tag)"
+							<button class="adlaf_btn_clause" role="button" x-on:click="handledAddClause(tag)"
 								x-text="tag">
 							</button>
 						</li>

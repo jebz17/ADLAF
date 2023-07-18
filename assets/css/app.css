@@ -15,6 +15,10 @@ section.adlaf_body_editor {
     row-gap: 0px;
 }
 
+div#editor {
+    height: 375px;
+}
+
 section.adlaf_body_editor > article,
 article.adlaf_editor_left {
     grid-area: 1 / 2 / 2 / 3;
