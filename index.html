@@ -40,34 +40,61 @@
 					con cédula jurídica costarricense número tres-ciento uno-veintitrés mil ciento cincuenta y cinco,
 					con domicilio en San José,
 					San Pedro de Montes de Oca, de la Fuente de la Hispanidad cincuenta metros este, Edificio LAFISE,
-					sociedad en adelante referida indistintamente como “el Banco” o “la Acreedora”, la suma de 
-					<strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO EN LETRAS</strong> <strong>MONEDA EN LETRAS</strong> 
+					sociedad en adelante referida indistintamente como “el Banco” o “la Acreedora”, la suma de
+					<strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO EN LETRAS</strong> <strong>MONEDA EN
+						LETRAS</strong>
 					EXACTOS <strong>SIGNO MONEDA</strong> <strong>MONTO DE LA
-					FACILIDAD CREDITICIA APROBADO EN NUMEROS</strong> moneda en curso legal de
+						FACILIDAD CREDITICIA APROBADO EN NUMEROS</strong> moneda en curso legal de
 					<strong> PAIS SEGÚN MONEDA</strong>, suma que pagará la Deudora mediante <strong>CANTIDAD DE CUOTAS
-					EN LETRAS</strong> cuotas, <strong> FORMA DE PAGO SEGÚN
-					LO APROBADO EN TDA</strong> por un monto de <strong>MONEDA EN LETRAS</strong> EXACTOS
+						EN LETRAS</strong> cuotas, <strong> FORMA DE PAGO SEGÚN
+						LO APROBADO EN TDA</strong> por un monto de <strong>MONEDA EN LETRAS</strong> EXACTOS
 					<strong>SIGNO MONEDA</strong> <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO
-					EN NUMEROS CON DOS DECIMALES</strong> moneda en curso legal de <strong> PAIS SEGÚN
-					MONEDA</strong> cada una, excepto la última que será del saldo
+						EN NUMEROS CON DOS DECIMALES</strong> moneda en curso legal de <strong> PAIS SEGÚN
+						MONEDA</strong> cada una, excepto la última que será del saldo
 					que aún quedare, debiendo realizar el pago de la primera cuota el día <strong>DIA DEL MES EN LETRAS
-					QUE INICIO EL CRÉDITO</strong> del MES
+						QUE INICIO EL CRÉDITO</strong> del MES
 					<strong>MES DEL INICIO EN LETRAS</strong> del año <strong>AÑO DE INICIO EN LETRAS</strong>, así
 					sucesivamente todos los días <strong>DIA DEL MES DE PAGO EN LETRAS</strong>
 					de cada mes, hasta la última cuota el día <strong>DIA DEL MES EN LETRAS QUE FINALIZA EL
-					CRÉDITO</strong> del MES <strong>MES DEL FINAL EN LETRAS</strong> del
+						CRÉDITO</strong> del MES <strong>MES DEL FINAL EN LETRAS</strong> del
 					año <strong>AÑO DEL FINAL EN LETRAS</strong>, fecha de vencimiento de esta deuda. Esta deuda
 					devengará intereses corrientes a partir de hoy
 					a una tasa de interés <strong>COMPOSICIÓN DE LA TASA DE INTERES DE LA FACILIDAD DEL
-					CREDITO</strong>. Los intereses corrientes y moratorios se calcularán conforme a los días transcurridos sobre 
+						CREDITO</strong>. Los intereses corrientes y moratorios se calcularán conforme a los días
+					transcurridos sobre
 					la base de un año comercial de trescientos sesenta <strong>360</strong> días. En caso
-					de mora, la Deudora reconocerá y pagará intereses moratorios a una tasa anual equivalente a la tasa de interés
+					de mora, la Deudora reconocerá y pagará intereses moratorios a una tasa anual equivalente a la tasa
+					de interés
 				</p>
 			</div>
 		</article>
 		<article class="adlaf-editor-right">
-			<h3 style="text-align: center;">Cláusulas</h3>
-			<hr class="adlaf-divisor"/>
+			<div x-data="{ open: false }">
+				<div class="adlaf-clasure-header">
+					<h3>Cláusulas</h3>
+					<button x-on:click="open = true">Agregar</button>
+				</div>
+				<div class="adlaf-modal" x-show="open">
+					<div class="adlaf-modal-content adlaf-fadeIn">
+						<span x-on:click="open = false" class="adlaf-modal-close">&times;</span>
+						<div class="adlaf-modal-header">
+							<h2>Title</h2>
+							<hr />
+						</div>
+						<div>
+							<article class="adlaf-form-group">
+								<label for="add">Nombre Cláusula</label>
+								<input type="text" name="add" id="add">
+							</article>
+						</div>
+						<div class="adlaf-modal-footer">
+							<button x-on:click="open = false">Cancelar</button>
+							<button>Guardar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="adlaf-divisor" />
 			<div class="adlaf-content-clause">
 				<ul style="list-style: none;"
 					x-data="{ tags: [ '&MONTO', '&DNI', '&NOMBRE', '&PROVINCIA', '&CANTON', '&DISTRITO', '&ESTADO_CIVIL', '&PROFESION', '&PAIS', '&CANTIDAD_CUOTAS', '&FORMA_PAGO', '&TASA_INTERES', '&REPRESENTANTE', '&FACULTAD_LEGAL' ] }">
@@ -80,16 +107,11 @@
 					</template>
 				</ul>
 			</div>
-			
+
 		</article>
 	</section>
 
-	<!-- <section>
-		<h3>Contenido del Editor</h3>
-		<p id="content-text"></p>
-	</section> -->
-
-	<script defer src="./assets/js/alpinejs@3.x.x.min.js"></script>
+	<script src="./assets/js/alpinejs@3.x.x.min.js"></script>
 	<script src="assets/js/quilljs_1.3.6.js"></script>
 	<script src="./assets/js/app.js"></script>
 

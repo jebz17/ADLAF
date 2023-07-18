@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-section.adlaf-body-editor {
+section.adlaf_body_editor {
     width: 1000px;
     margin: 40px;
     margin-left: auto;
@@ -15,49 +15,46 @@ section.adlaf-body-editor {
     row-gap: 0px;
 }
 
-
-section.adlaf-body-editor>article,
-article.adlaf-editor-left {
+section.adlaf_body_editor > article,
+article.adlaf_editor_left {
     grid-area: 1 / 2 / 2 / 3;
     padding: 20px;
 }
 
-section.adlaf-body-editor>article.adlaf-editor-right {
+section.adlaf_body_editor > article.adlaf_editor_right {
     grid-area: 1 / 1 / 2 / 2;
     margin: 20px 0;
     border: solid 1px rgba(128, 128, 128, 0.49);
 }
 
-hr.adlaf-divisor {
+hr.adlaf_divisor {
     margin: 10px 0;
 }
 
-div.adlaf-content-clause {
+div.adlaf_content_clause {
     height: 330px;
     overflow-y: auto;
 }
 
-div.adlaf-content-clause::-webkit-scrollbar {
+div.adlaf_content_clause::-webkit-scrollbar {
     width: 8px;
 }
 
-div.adlaf-content-clause::-webkit-scrollbar-track {
+div.adlaf_content_clause::-webkit-scrollbar-track {
     background: #F1F1F1;
     border-radius: 10px;
 }
 
-div.adlaf-content-clause::-webkit-scrollbar-thumb {
+div.adlaf_content_clause::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #888;
 }
 
-div.adlaf-content-clause::-webkit-scrollbar-thumb:hover {
+div.adlaf_content_clause::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
-
-/* CSS */
-.adlaf-btn-clause {
+.adlaf_btn_clause {
     align-items: center;
     background-color: initial;
     background-image: linear-gradient(#464d55, #25292e);
@@ -89,21 +86,123 @@ div.adlaf-content-clause::-webkit-scrollbar-thumb:hover {
     touch-action: manipulation;
 }
 
-.adlaf-btn-clause:hover {
+.adlaf_btn_clause:hover {
     box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
     opacity: .85;
 }
 
-.adlaf-btn-clause:active {
+.adlaf_btn_clause:active {
     outline: 0;
 }
 
-.adlaf-btn-clause:focus {
+.adlaf_btn_clause:focus {
     box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
 @media (max-width: 420px) {
-    .adlaf-btn-clause {
+    .adlaf_btn_clause {
         height: 48px;
+    }
+}
+
+.adlaf_clasure_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adlaf_modal {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    padding-top: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    /* background: rgba(38, 36, 36, 0.7); */
+    transition: all .4s;
+    z-index: 999;
+
+    background: rgba(238, 238, 238, 0.7);
+}
+
+.adlaf_modal_header {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #F8F8F8;
+    padding: 10px 10px 15px 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    box-shadow: rgba(248, 248, 248, 1) 0px 1px 4px, rgb(248, 248, 248) 0px 0px 0px 3px;
+
+}
+
+.adlaf_modal_header h2 {
+    color: #003822;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.adlaf_modal_header hr {
+    color: #003822;
+    height: 2px;
+    background: #003822;
+}
+
+.adlaf_modal_content {
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: #fff;
+    padding: 1em 2em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: gray;
+    box-shadow: 5px 5px 0px black;
+}
+
+.adlaf_modal_footer {
+    text-align: right;
+}
+
+.adlaf_modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.adlaf_fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .7s;
+    animation-duration: .7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
