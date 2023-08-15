@@ -1,0 +1,99 @@
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./assets/css/quilljs_1.3.6_snow.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/app.css">
+	<title>Verificar Campos</title>
+</head>
+<style>
+
+    .adlaf_container {
+        /* background: green; */
+        width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .adlaf_content_form {
+        border: rgba(238, 238, 238, 0.7) solid 1px;
+        border-radius: 8px;
+        padding: 20px 25px;
+        width: 420px;
+        margin: 0 auto;
+    }
+
+    .adlaf_subtitule {
+        /* border-bottom: 2px solid #000; */
+        /* padding-bottom: 5px; */
+        /* margin-bottom: 20px; */
+        /* text-indent: 15px; */
+    }
+
+    .adlaf_group {
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input.adlaf_input {
+        /* position: relative; */
+        /* left: 80px; */
+        width: 200px;
+        padding: 5px 0;
+        text-indent: 5px;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+        border: 2px solid #ccc;
+        transition: border-color 0.3s ease;
+    }
+
+    input.adlaf_input:focus {
+        border: 2px solid #888;
+        transition: border-color 0.2s ease;
+    }
+
+    label.adlaf_label {
+        font-weight: bold;
+    }
+
+</style>
+<body>
+	<div class="adlaf_container">
+        <div class="adlaf_content_form">
+            <div class="adlaf_group">
+                <h3 class="adlaf_subtitule">Datos Requeridos</h3>
+                <button class="adlaf_btn" onclick="alert('clic');">Aceptar</button>
+            </div>
+            <hr />
+            <br />
+            <div class="adlaf_group">
+                <label class="adlaf_label" for="field">Campo 21155:</label>
+                <input class="adlaf_input" type="text" name="field" id="field" required value="123"/>
+            </div>
+
+            <div class="adlaf_group">
+                <label class="adlaf_label" for="field">Campo 12:</label>
+                <input class="adlaf_input" type="text" name="field" id="field" required value="123"/>
+            </div>
+
+            <div class="adlaf_group">
+                <label class="adlaf_label" for="field">Campo 85:</label>
+                <input class="adlaf_input" type="text" name="field" id="field" required value="123"/>
+            </div>
+            
+        </div>
+        
+    </div>
+
+	<script src="./assets/js/alpinejs@3.x.x.min.js"></script>
+	<script src="assets/js/quilljs_1.3.6.js"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+
+</html>

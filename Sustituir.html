@@ -1,0 +1,94 @@
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./assets/css/quilljs_1.3.6_snow.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/app.css">
+	<title>QuillJS</title>
+</head>
+
+<body>
+	<section style="padding: 20px 50px;">
+        <div id="tda">
+            <h3 style="text-align:center;">PAGARÉ</h3><p style="text-align:center;">POR UN MONTO DE <strong>@MONEDA;</strong> <strong>@MONTO;</strong></p><p><br /></p><p style="text-align: justify;">
+                <strong>@CLIENTE;</strong> cédula de persona jurídica número <strong>@CEDULA;</strong>,
+                con domicilio social en <strong>@PROVINCIA;</strong>, <strong>@CANTÓN;</strong>,
+                <strong>@DISTRITO;</strong>, OTRAS SEÑAS
+                <strong>DIRECCIÓN EXACTA</strong>, representada en este acto por <strong>NOMBRE COMPLETO DEL
+                    REPRESENTANTE LEGAL</strong>, mayor de edad, ESTADO CIVIL
+                <strong>@ESTADOCIVIL;</strong>, PROFESION U OFICIO <strong>@PROFESIÓN;</strong>,
+                vecino de PROVINCIA <strong>@PROVINCIA;</strong>, CANTON
+                <strong>@CANTÓN;</strong>, DISTRITO <strong>@DISTRITO;</strong>, OTRAS SEÑAS
+                <strong>DIRECCIÓN EXACTA</strong>, portador de la cédula de identidad número
+                <strong>@cedula;</strong>, actuando en su condición de
+                <strong>@REPRESENTACION;</strong> con facultades de <strong>@PODERLEGAL;</strong>,
+                del Registro Público bajo el citado número de cédula jurídica, sociedad en adelante denominada como
+                “La Deudora”,
+                MANIFIESTA: Que por este PAGARÉ regido por las leyes de la República de Costa Rica, PROMETE
+                INCONDICIONALMENTE PAGAR a
+                la orden de BANCO LAFISE, S.A., un banco organizado y constituido de acuerdo con las leyes de la
+                República de Costa Rica,
+                con cédula jurídica costarricense número tres-ciento uno-veintitrés mil ciento cincuenta y cinco,
+                con domicilio en San José,
+                San Pedro de Montes de Oca, de la Fuente de la Hispanidad cincuenta metros este, Edificio LAFISE,
+                sociedad en adelante referida indistintamente como “el Banco” o “la Acreedora”, la suma de
+                <strong>@MONTO;</strong> <strong>@MONEDA;</strong>
+                EXACTOS <strong>SIGNO MONEDA</strong> <strong>MONTO DE LA
+                    FACILIDAD CREDITICIA APROBADO EN NUMEROS</strong> moneda en curso legal de
+                <strong> PAIS SEGÚN MONEDA</strong>, suma que pagará la Deudora mediante <strong>CANTIDAD DE CUOTAS
+                    EN LETRAS</strong> cuotas, <strong> FORMA DE PAGO SEGÚN
+                    LO APROBADO EN TDA</strong> por un monto de <strong>@MONTO;</strong> EXACTOS
+                <strong>@MONEDA;</strong> <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO
+                    EN NUMEROS CON DOS DECIMALES</strong> moneda en curso legal de <strong> PAIS SEGÚN
+                    MONEDA</strong> cada una, excepto la última que será del saldo
+                que aún quedare, debiendo realizar el pago de la primera cuota el día <strong>DIA DEL MES EN LETRAS
+                    QUE INICIO EL CRÉDITO</strong> del MES
+                <strong>MES DEL INICIO EN LETRAS</strong> del año <strong>AÑO DE INICIO EN LETRAS</strong>, así
+                sucesivamente todos los días <strong>DIA DEL MES DE PAGO EN LETRAS</strong>
+                de cada mes, hasta la última cuota el día <strong>DIA DEL MES EN LETRAS QUE FINALIZA EL
+                    CRÉDITO</strong> del MES <strong>MES DEL FINAL EN LETRAS</strong> del
+                año <strong>AÑO DEL FINAL EN LETRAS</strong>, fecha de vencimiento de esta deuda. Esta deuda
+                devengará intereses corrientes a partir de hoy
+                a una tasa de interés <strong>COMPOSICIÓN DE LA TASA DE INTERES DE LA FACILIDAD DEL
+                    CREDITO</strong>. Los intereses corrientes y moratorios se calcularán conforme a los días
+                transcurridos sobre
+                la base de un año comercial de trescientos sesenta <strong>360</strong> días. En caso
+                de mora, la Deudora reconocerá y pagará intereses moratorios a una tasa anual equivalente a la tasa
+                de interés
+            </p>
+        </div>
+
+        <textarea name="xx" id="x" cols="30" rows="10"> <strong>@MONTO;</strong> <strong>@MONEDA;</strong>
+            EXACTOS <strong>SIGNO MONEDA</strong> <strong>MONTO DE LA
+                FACILIDAD CREDITICIA APROBADO EN NUMEROS</strong> moneda en curso legal de
+            <strong> PAIS SEGÚN MONEDA</strong>, suma que pagará la Deudora mediante <strong>CANTIDAD DE CUOTAS
+                EN LETRAS</strong> cuotas, <strong> FORMA DE PAGO SEGÚN
+                LO APROBADO EN TDA</strong> por un monto de <strong>@MONTO;</strong> EXACTOS
+            <strong>@MONEDA;</strong> <strong>MONTO DE LA FACILIDAD CREDITICIA APROBADO
+                EN NUMEROS CON DOS DECIMALES</strong> moneda en curso legal de <strong> PAIS SEGÚN
+                MONEDA</strong> cada una, excepto la última que será del saldo</textarea>
+    </section>
+
+    <script>
+        window.onload = () => {
+            // const nuevo = content.replace(/@([^;]+);/g, '')
+            const tda = document.getElementById("tda");
+            let content = tda.innerHTML;
+            content = content.replace(/@MONEDA;/g, '$');
+            content = content.replace(/@MONTO;/g, '2 054.54');
+            content = content.replace(/@PROVINCIA;/g, 'Alajuela');
+            
+            while(tda.firstChild) {
+                tda.removeChild(tda.firstChild); 
+            }
+            
+            tda.innerHTML = content;
+
+            const txt = document.getElementById('x');
+            console.log(txt.value);
+        }
+    </script>
+</body>
+
+</html>
