@@ -1,0 +1,149 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./assets/summernote-0.8.18/summernote-lite.min.css" rel="stylesheet">
+    
+    <script src="./assets/js/jquery.com_jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="./assets/summernote-0.8.18/summernote-lite.min.js"></script>
+    
+    <script src="./assets/summernote-0.8.18/lang/summernote-es-ES.min.js"></script>
+
+    <title>Summernote</title>
+</head>
+<style>
+    .note-modal-footer p {
+        display: none;
+    }
+
+</style>
+<body>
+
+    <div style="margin: 50px auto; width: 900px;">
+        <div id="summernote">
+            <div id="123" class="adlaf_page">
+                <html>
+                <title>doc #1</title>
+
+                <style>
+                    .center {
+                        text-align: center;
+                    }
+                </style>
+
+                <h1 class="center">Titulo #1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quia eius impedit quo cumque, velit
+                    dolores voluptatibus facere possimus reprehenderit nemo, similique tenetur magni eaque nihil
+                    consectetur et dicta accusamus.
+                </p>
+
+                </html>
+            </div>
+
+            <div id="456" class="adlaf_page">
+                <html>
+                <title>doc #1</title>
+
+                <style>
+                    .center {
+                        text-align: center;
+                    }
+                </style>
+
+                <h1 class="center">Titulo #1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quia eius impedit quo cumque, velit
+                    dolores voluptatibus facere possimus reprehenderit nemo, similique tenetur magni eaque nihil
+                    consectetur et dicta accusamus.
+                </p>
+
+                </html>
+            </div>
+
+            <div id="789" class="adlaf_page">
+                <html>
+                <title>doc #1</title>
+
+                <style>
+                    .center {
+                        text-align: center;
+                    }
+                </style>
+
+                <h1 class="center">Titulo #1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quia eius impedit quo cumque, velit
+                    dolores voluptatibus facere possimus reprehenderit nemo, similique tenetur magni eaque nihil
+                    consectetur et dicta accusamus.
+                </p>
+
+                </html>
+            </div>
+
+            <div id="147" class="adlaf_page">
+                <html>
+                <title>doc #1</title>
+
+                <style>
+                    .center {
+                        text-align: center;
+                    }
+                </style>
+
+                <h1 class="center">Titulo #1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quia eius impedit quo cumque, velit
+                    dolores voluptatibus facere possimus reprehenderit nemo, similique tenetur magni eaque nihil
+                    consectetur et dicta accusamus.
+                </p>
+
+                </html>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        $(document).ready(function () {
+
+            $(document).ready(function () {
+                $('#summernote').summernote({
+                    lang: 'es-ES',
+                    placeholder: 'Escribir...',
+                    height: 340,
+                    minHeight: 340,
+                    maxHeight: 340,
+                    focus: true,
+                    toolbar: [
+                        ['action', ['style', 'undo', 'redo', 'clear']],    
+                        ['font1', ['bold', 'italic', 'underline', 'strikethrough']],
+                        ['font2', ['subscript', 'superscript', 'fontsize', 'height']],
+                        ['para', ['ul', 'ol', 'paragraph', 'color']],
+                        ['hadled', ['hr', 'table', 'codeview', 'help']]
+                        
+                    ]
+                });
+            });
+        });
+
+        // obtener contenido html
+        // var markupStr = $('#summernote').summernote('code');
+        // insertar codigo
+        // var markupStr = 'hello world';
+        // $('#summernote').summernote('code', markupStr);
+
+        // $('#summernote').summernote('insertText', 'hello world');
+
+        /* si esta vacio
+        if ($('#summernote').summernote('isEmpty')) {
+            alert('editor content is empty');
+        }
+        */
+
+    </script>
+</body>
+
+</html>
